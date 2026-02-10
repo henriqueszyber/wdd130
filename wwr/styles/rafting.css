@@ -241,7 +241,7 @@ button[type="submit"] {
 
 .employee-grid img {
   width: 100px;
-  height: 74px;
+  height: 100px;
   object-fit: cover;
   background: #d6d6d6;
 }
