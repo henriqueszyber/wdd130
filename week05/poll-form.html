@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/poll-form.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form>
+            <h1>Contact Information</h1>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="useremail">User Email:</label>
+            <input type="text" name="useremail" id="useremail" required>
+            <h1>Questions</h1>
+            <label for="browser">What is your favorite browser?</label>
+            <select name="browser" id="browser">
+                <option value="1">Chrome</option>
+                <option value="2">Safari</option>
+                <option value="3">Edge</option>
+                <option value="4">Brave</option>
+                <option value="5">Other</option>
+            </select>
+            <label for="pet">Do you have a household pet?</label>
+            <input type="checkbox" name="pet" id="pet">
+            <label for="feedback">List the places you have lived</label>
+            <textarea name="feedback" id="feedback" placeholder="Stillwater Florida, Amsterdam Netherlands, Timbuktu Mali"></textarea>
+            <button type="submit">Submit Poll</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
