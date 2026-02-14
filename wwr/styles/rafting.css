@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #f6ff00;
+  --primary-color: #e8ec70;
   --secondary-color: #573f3c;
   --accent1-color: #264653;
   --heading-font: "Courier New", "Lucida Console", monospace;
@@ -289,7 +289,7 @@ footer p {
     width: 100%;
   }
 
-  .contact-layout,
+  .contact-layout, 
   .employee-grid,
   .contact-form {
     grid-template-columns: 1fr;
@@ -297,5 +297,258 @@ footer p {
 
   .contact-form label {
     font-size: 18px;
+  }
+}
+
+.home-page {
+  padding: 0 1rem 2rem;
+}
+
+.home-hero {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.home-hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-hero h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24px;
+  margin: 0;
+  padding: 14px 16px;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(38 70 83 / 78%);
+}
+
+/* Newsletter */
+.home-newsletter {
+  margin-top: 1.5rem;
+  background: #fff;
+  border: 1px solid #888;
+  padding: 1rem;
+}
+
+.home-newsletter h2 {
+  margin: 0 0 0.6rem;
+}
+
+.home-newsletter p {
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.home-newsletter form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+}
+
+.home-newsletter label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.home-newsletter input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #777;
+  font-size: 16px;
+}
+
+/* only home form button, not global submit buttons */
+.home-newsletter button {
+  grid-column: 1 / -1;
+  border: 1px solid #777;
+  padding: 10px 14px;
+  background: #e8ec70;
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* CTA */
+.home-cta {
+  margin-top: 1.5rem;
+  background: #264653;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 1rem;
+}
+
+.home-cta h2,
+.home-cta p {
+  color: #fff;
+  margin: 0;
+}
+
+.home-cta p {
+  margin-top: 0.5rem;
+}
+
+.home-cta a {
+  background: #e8ec70;
+  color: #111;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid #777;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Purpose + Offerings grid */
+.home-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.home-grid article {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #888;
+  background: #fff;
+}
+
+.home-grid article img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-grid h3,
+.home-grid p {
+  margin: 12px;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .home-newsletter form,
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-hero img {
+    height: 300px;
+  }
+}
+
+.trips-page {
+  padding: 16px;
+}
+
+.trips-intro {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.trips-intro p {
+  margin: 8px 0 16px;
+  padding: 0;
+}
+
+.trips-cta {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #111;
+  background: #e8ec70;
+  border: 1px solid #777;
+  padding: 10px 14px;
+}
+
+/* non-single-column layout */
+.trip-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.trip-card {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #888;
+  background: #fff;
+  overflow: hidden;
+}
+
+.trip-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.trip-card div {
+  padding: 12px;
+}
+
+.trip-card h2,
+.trip-card p {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.trip-table-section {
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.trip-table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #888;
+  margin-top: 10px;
+}
+
+.trip-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.trip-table-section th,
+.trip-table-section td {
+  border: 1px solid #888;
+  padding: 10px;
+  text-align: left;
+}
+
+.trip-table-section thead {
+  background: #e8e8e8;
+}
+
+@media (max-width: 860px) {
+  .trip-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-card:last-child {
+    grid-column: auto;
   }
 }
