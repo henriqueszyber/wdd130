@@ -93,6 +93,10 @@ article {
   color: #fff;
 }
 
+.hero h2 {
+  color: #fff;
+}
+
 header {
   background: #c7b6e8;
   display: flex;
